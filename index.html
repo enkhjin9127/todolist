@@ -11,8 +11,13 @@
       <div class="todo-app">
         <h2>To Do List <img src="img/icon.png" alt="" /></h2>
         <div class="row">
-          <input type="text" id="input-box" placeholder="Add your text" />
-          <button>Add</button>
+          <input type="text" id="input-box" placeholder="Add your task" />
+          <select id="priority">
+            <option value="1">High</option>
+            <option value="2">Medium</option>
+            <option value="3">Low</option>
+          </select>
+          <button onclick="addTask()">Add</button>
         </div>
         <ul id="list-container">
           <!-- <li class="checked">Task 1</li>

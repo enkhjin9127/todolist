@@ -61,6 +61,7 @@ ul li {
   user-select: none;
   cursor: pointer;
   position: relative;
+  transition: transform 0.2s ease;
 }
 ul li::before {
   content: "";
@@ -80,4 +81,64 @@ ul li.checked {
 }
 ul li.checked::before {
   background-image: url(img/checked.png);
+}
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  background: none;
+  border: none;
+}
+ul li span:hover {
+  background: none;
+  border: none;
+}
+ul li span {
+  padding: 0;
+  margin: 0;
+}
+
+ul li:not(.dragging) {
+  transform: scale(1);
+}
+
+ul li.dragging {
+  transform: scale(1.05);
+}
+
+select {
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 30px;
+  background: #fff;
+  margin-right: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.high-priority {
+  background-color: #ffccd5; /* Light Red for High Priority */
+  border-left: 5px solid #ff595e;
+}
+
+.medium-priority {
+  background-color: #fff3b0; /* Light Yellow for Medium Priority */
+  border-left: 5px solid #ffca3a;
+}
+
+.low-priority {
+  background-color: #d4f1f4; /* Light Blue for Low Priority */
+  border-left: 5px solid #1982c4;
+}
+h2 {
+  padding-left: 15px;
+}
+.dragging {
+  opacity: 0.5; /* Make the dragged item semi-transparent */
 }
